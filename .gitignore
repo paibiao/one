@@ -12,7 +12,6 @@ node_modules
 dist
 dist-ssr
 coverage
-b3dm
 *.local
 
 /cypress/videos/
