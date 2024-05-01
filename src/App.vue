@@ -1,5 +1,15 @@
 <template>
-  <div id="btns">
+  <el-card style="max-width: 480px" id="btns">
+    <p
+      v-for="(item, index) in facilities"
+      :key="index"
+      class="text item"
+      @click="flyTo(item.cameraOrt, item.cameraPosition)"
+    >
+      {{ item.name }}
+    </p>
+  </el-card>
+  <!-- <div id="btns">
     <button
       v-for="(item, index) in facilities"
       :key="index"
@@ -7,7 +17,7 @@
     >
       {{ item.name }}
     </button>
-  </div>
+  </div> -->
   <div id="cesiumContainer"></div>
 </template>
 
@@ -50,6 +60,7 @@ onMounted(() => {
   overflow: hidden;
 }
 #btns {
+  width: 300px;
   position: fixed;
   left: 10px;
   top: 10px;
